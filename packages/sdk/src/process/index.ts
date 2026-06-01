@@ -1,4 +1,5 @@
 import { BaseSDK, LISTENER_CMDS } from "../core";
+import { Report } from "../report";
 import {
     ProcessItem,
     ProcessGetItemOptions,
@@ -429,5 +430,9 @@ export class Process extends BaseSDK {
             flowId: this._id,
             instanceId: options.instanceId
         });
+    }
+
+    getReport(reportId: string): Report {
+        return new Report(this._id, "process", reportId);
     }
 }

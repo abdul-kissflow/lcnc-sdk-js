@@ -1,4 +1,5 @@
 import { BaseSDK, LISTENER_CMDS } from "../core";
+import { Report } from "../report";
 import {
     BoardItem,
     BoardGetItemOptions,
@@ -172,5 +173,9 @@ export class Board extends BaseSDK {
             flowId: this._id,
             viewId: options?.viewId || ""
         });
+    }
+
+    getReport(reportId: string): Report {
+        return new Report(this._id, "case", reportId);
     }
 }

@@ -1,5 +1,6 @@
 import { BaseSDK, LISTENER_CMDS } from "../core";
 import { requireFieldAsync } from "../utils/validation";
+import { Report } from "../report";
 import {
 	DataformItem,
 	DataformQueryOptions,
@@ -165,4 +166,7 @@ export class Dataform extends BaseSDK {
 		});
 	}
 
+	getReport(reportId: string): Report {
+		return new Report(this._id, "form", reportId);
+	}
 }
