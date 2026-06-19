@@ -66,6 +66,7 @@ export type BoardItem = {
 
 export type DataformItem = {
   _id: string;
+  _view_id?: string;
 };
 
 
