@@ -5,7 +5,7 @@ sidebar:
   order: 30
 ---
 
-In Kissflow apps, dataforms gather and store data, enabling users to submit data into an app.
+In Kissflow apps, dataforms gather and store data, enabling users to submit data into an app. They are best used as master tables.
 
 To begin with, get a dataform instance using the `getDataform` method from app's interface.
 

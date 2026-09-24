@@ -25,7 +25,7 @@ For internal APIs, refer to the [Kissflow API documentation](https://api.kissflo
 
 ###### url (String)
 
-Resoure URL for the REST API call to be fetched,
+Relative resource URL for the REST API call, starting with `/` — for example, `/process/2/${kf.account._id}/...`. It is resolved against the current Kissflow domain, so don't include the host.
 
 ###### config (Object)
 

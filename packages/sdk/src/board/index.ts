@@ -69,7 +69,7 @@ export class Board extends BaseSDK {
 
   /**
    * Get a single board/case item by instance ID
-   * @param options - instanceId (required)
+   * @param options - instanceId (required), optional viewId
    * @returns Promise containing the item data
    */
   getItem(options: BoardGetItemOptions): Promise<BoardItem> {
@@ -77,7 +77,8 @@ export class Board extends BaseSDK {
     if (error) return error;
     return this._postMessageAsync(LISTENER_CMDS.BOARD_GET_ITEM, {
       flowId: this._id,
-      instanceId: options.instanceId
+      instanceId: options.instanceId,
+      viewId: options.viewId || ""
     });
   }
 

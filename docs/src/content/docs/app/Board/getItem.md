@@ -22,4 +22,4 @@ const item = await boardInstance.getItem({ instanceId: "item_123" });
 
 ### Returns
 
-Returns an object with the item's `_id` and, if scoped to a view, `_view_id`.
+Returns the item's data with its `_id` and, if scoped to a view, `_view_id`.

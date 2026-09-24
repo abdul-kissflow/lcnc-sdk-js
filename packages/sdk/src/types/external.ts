@@ -302,6 +302,7 @@ export type BoardQueryResponse = QueryResponse;
 
 export type BoardGetItemOptions = {
     instanceId: string;
+    viewId?: string;
 };
 
 export type BoardCreateItemOptions = {
