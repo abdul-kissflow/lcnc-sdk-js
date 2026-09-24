@@ -9,9 +9,10 @@ Retrieves a single board item by its instance ID.
 
 ### Parameters
 
-| Parameters | Type   | Description                                       |
-| ---------- | ------ | -------------------------------------------------- |
-| instanceId | String | Unique Id of the board item. Required.              |
+| Parameters | Type   | Description                                     |
+| ---------- | ------ | ----------------------------------------------- |
+| instanceId | String | Unique Id of the board item. Required.          |
+| viewId     | String | Optional. Scopes the lookup to a specific view. |
 
 ### Syntax
 
@@ -21,4 +22,4 @@ const item = await boardInstance.getItem({ instanceId: "item_123" });
 
 ### Returns
 
-Returns an object with the item's `_id` and `_view_id`.
+Returns an object with the item's `_id` and, if scoped to a view, `_view_id`.

@@ -22,4 +22,4 @@ The following [Form state](/form/form-state/about/) methods are available only i
 
 > Note: Form’s SDKs exclusively support read and update methods, with no provision for create and delete operations.
 
-> Note: `kf.context` resolves to a Form instance inside form events. Outside of form events — for example, when building a custom UI for a board or dataform item — you can obtain a Form instance explicitly via [`board.initForm()`](/app/board/initform/) or [`dataform.initForm()`](/app/dataform/initform/).
+> Note: `kf.context` resolves to a Form instance inside form events. Outside of form events — for example, when working with a board or dataform item directly — you can obtain a Form instance explicitly via [`board.initForm()`](/app/board/initform/) or [`dataform.initForm()`](/app/dataform/initform/).

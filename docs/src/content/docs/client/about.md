@@ -5,7 +5,7 @@ sidebar:
   order: 0
 ---
 
-`kf.client` provides methods to interact with the client running your custom UI — showing dialogs and toasts, navigating, working with files and media, and invoking device capabilities like the scanner and map picker.
+`kf.client` provides methods to interact with the Kissflow client (web or mobile) — showing dialogs and toasts, navigating, working with files and media, and invoking device capabilities like the scanner and map picker.
 
 The available methods are grouped by capability:
 

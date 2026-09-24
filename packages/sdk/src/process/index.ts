@@ -503,19 +503,25 @@ export class Process extends BaseSDK {
     }
 
     getFieldOptions(
-        options?: ProcessFieldOptions
+        options: ProcessFieldOptions
     ): Promise<ProcessQueryResponse> {
+        const error = requireFieldsAsync([
+            { value: options?.instanceId, name: "instanceId" },
+            { value: options?.activityInstanceId, name: "activityInstanceId" },
+            { value: options?.fieldId, name: "fieldId" }
+        ]);
+        if (error) return error;
         return this._postMessageAsync(LISTENER_CMDS.PROCESS_GET_FIELD_OPTIONS, {
             flowId: this._id,
-            instanceId: options?.instanceId || "",
-            activityInstanceId: options?.activityInstanceId || "",
-            fieldId: options?.fieldId || "",
-            fieldType: options?.fieldType,
-            tableId: options?.tableId,
-            tableRowId: options?.tableRowId,
-            pageNumber: options?.pageNumber,
-            pageSize: options?.pageSize,
-            searchValue: options?.searchValue
+            instanceId: options.instanceId,
+            activityInstanceId: options.activityInstanceId,
+            fieldId: options.fieldId,
+            fieldType: options.fieldType,
+            tableId: options.tableId,
+            tableRowId: options.tableRowId,
+            pageNumber: options.pageNumber,
+            pageSize: options.pageSize,
+            searchValue: options.searchValue
         });
     }
 

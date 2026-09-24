@@ -9,14 +9,14 @@ Creates a new item in the dataform.
 
 ### Parameters
 
-| Parameters | Type   | Description                                                          |
-| ---------- | ------ | ----------------------------------------------------------------------|
+| Parameters | Type   | Description                                                                            |
+| ---------- | ------ | -------------------------------------------------------------------------------------- |
 | options    | Object | Optional. `data` (Object) - initial field values keyed by field Id; `viewId` (String). |
 
 ### Syntax
 
 ```js
-const item = await dataformInstance.createItem({ data: { Name: "New Item" } });
+const item = await dataformInstance.createItem({ data: { firstName: "John" } });
 ```
 
 ### Returns

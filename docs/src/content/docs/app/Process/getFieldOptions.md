@@ -9,12 +9,16 @@ Retrieves the available options for a dropdown/lookup field.
 
 ### Parameters
 
-| Parameters | Type   | Description                                                                                             |
-| ---------- | ------ | ----------------------------------------------------------------------------------------------------------|
-| options    | Object | Optional. `instanceId`, `activityInstanceId`, `fieldId`, plus optional `fieldType`, `tableId`, `tableRowId`. |
+| Parameters | Type   | Description                                                                                                                                                 |
+| ---------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| options    | Object | `instanceId` (String, required), `activityInstanceId` (String, required), `fieldId` (String, required), plus optional `fieldType`, `tableId`, `tableRowId`. |
 
 ### Syntax
 
 ```js
-const options = await processInstance.getFieldOptions({ instanceId: "item_123", activityInstanceId: "act_456", fieldId: "Category" });
+const options = await processInstance.getFieldOptions({
+  instanceId: "item_123",
+  activityInstanceId: "act_456",
+  fieldId: "Category"
+});
 ```

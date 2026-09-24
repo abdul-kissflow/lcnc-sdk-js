@@ -1,11 +1,11 @@
 ---
 title: Environment
-description: Details about the environment the custom UI is running in
+description: Details about the environment the SDK is running in
 sidebar:
   order: 4
 ---
 
-Access details about the environment the custom UI is running in.
+Access details about the environment the SDK is running in.
 
 ### Properties
 
@@ -25,7 +25,7 @@ Returns an object describing the current runtime environment.
 
 ### Example
 
-To render a compact layout when the custom UI runs inside the mobile app.
+To render a compact layout when running inside the mobile app.
 
 ```js
 const { isMobile } = kf.env;

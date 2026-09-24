@@ -8,7 +8,7 @@ sidebar:
 Opens the platform's barcode/QR scanner and resolves with the decoded text. The scanner UI (camera stream and decoding) runs in the parent window, which owns the camera permission.
 
 :::note[Note]
-Currently supported in web custom app UIs only; the mobile (PWA) custom UI doesn't host the scanner yet.
+Currently supported on web only; not yet available in the mobile (PWA) app.
 :::
 
 ### Parameter

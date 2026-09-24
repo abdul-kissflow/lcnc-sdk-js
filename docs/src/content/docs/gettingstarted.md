@@ -1,6 +1,6 @@
 ---
 title: Getting started with Kissflow SDK
-description: Interact with Kissflow from your scripts and custom UI using the JavaScript SDK.
+description: Interact with Kissflow from your code using the JavaScript SDK.
 ---
 
 The Kissflow SDK is a JavaScript library that lets you interact with Kissflow — read and update form fields, work with boards, dataforms, and processes, call internal APIs, format values, and drive the client (dialogs, files, navigation, and more).

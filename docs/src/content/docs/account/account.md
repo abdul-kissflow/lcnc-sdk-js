@@ -5,7 +5,7 @@ sidebar:
   order: 1
 ---
 
-Access details about the current Kissflow account the custom UI is running in.
+Access details about the current Kissflow account.
 
 ### Syntax
 

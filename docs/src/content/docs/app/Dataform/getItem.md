@@ -9,10 +9,10 @@ Retrieves a single item by its ID.
 
 ### Parameters
 
-| Parameters | Type   | Description                                    |
-| ---------- | ------ | ------------------------------------------------ |
-| itemId     | String | Unique Id of the item. Required.                  |
-| viewId     | String | Optional. Scopes the lookup to a specific view.   |
+| Parameters | Type   | Description                                     |
+| ---------- | ------ | ----------------------------------------------- |
+| itemId     | String | Unique Id of the item. Required.                |
+| viewId     | String | Optional. Scopes the lookup to a specific view. |
 
 ### Syntax
 
@@ -22,4 +22,4 @@ const item = await dataformInstance.getItem({ itemId: "item_123" });
 
 ### Returns
 
-Returns an object with the item's `_id` and, if scoped to a view, `_view_id`.
+Returns the item's data with its `_id` and, if scoped to a view, `_view_id`.

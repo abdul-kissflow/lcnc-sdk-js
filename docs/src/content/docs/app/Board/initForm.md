@@ -13,17 +13,17 @@ Initializes and returns a [Form](/form/about/) instance bound to a board item, f
 
 ### Parameters
 
-| Parameters | Type   | Description                                                          |
-| ---------- | ------ | ----------------------------------------------------------------------|
-| instanceId | String | Optional. If omitted, a new board item is created.                    |
-| viewId     | String | Optional. Scopes the form's schema/permissions to a specific view.    |
+| Parameters | Type   | Description                                                        |
+| ---------- | ------ | ------------------------------------------------------------------ |
+| instanceId | String | Optional. If omitted, a new board item is created.                 |
+| viewId     | String | Optional. Scopes the form's schema/permissions to a specific view. |
 
 ### Syntax
 
 ```js
 // Create a new board item
 const form = await boardInstance.initForm();
-await form.updateField({ Name: "New Item" });
+await form.updateField({ itemType: "New Item" });
 
 // Edit an existing board item
 const form = await boardInstance.initForm("item_123");

@@ -1,6 +1,6 @@
 import { BaseSDK, LISTENER_CMDS } from "../core";
 import { CustomComponentForm } from "../form";
-import { requireFieldAsync } from "../utils/validation";
+import { requireFieldAsync, requireFieldsAsync } from "../utils/validation";
 import {
     DataformItem,
     DataformQueryOptions,
@@ -168,20 +168,25 @@ export class Dataform extends BaseSDK {
     }
 
     getFieldOptions(
-        options?: DataformFieldOptions
+        options: DataformFieldOptions
     ): Promise<DataformQueryResponse> {
+        const error = requireFieldsAsync([
+            { value: options?.instanceId, name: "instanceId" },
+            { value: options?.fieldId, name: "fieldId" }
+        ]);
+        if (error) return error;
         return this._postMessageAsync(
             LISTENER_CMDS.DATAFORM_GET_FIELD_OPTIONS,
             {
                 flowId: this._id,
-                instanceId: options?.instanceId || "",
-                fieldId: options?.fieldId || "",
-                fieldType: options?.fieldType,
-                tableId: options?.tableId,
-                tableRowId: options?.tableRowId,
-                pageNumber: options?.pageNumber,
-                pageSize: options?.pageSize,
-                searchValue: options?.searchValue
+                instanceId: options.instanceId,
+                fieldId: options.fieldId,
+                fieldType: options.fieldType,
+                tableId: options.tableId,
+                tableRowId: options.tableRowId,
+                pageNumber: options.pageNumber,
+                pageSize: options.pageSize,
+                searchValue: options.searchValue
             }
         );
     }

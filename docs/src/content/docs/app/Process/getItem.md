@@ -9,13 +9,20 @@ Retrieves a single process instance.
 
 ### Parameters
 
-| Parameters         | Type   | Description                              |
-| ------------------- | ------ | ------------------------------------------ |
-| instanceId          | String | Unique Id of the process instance. Required. |
-| activityInstanceId  | String | Id of the current activity instance. Required. |
+| Parameters         | Type   | Description                                    |
+| ------------------ | ------ | ---------------------------------------------- |
+| instanceId         | String | Unique Id of the process instance. Required.   |
+| activityInstanceId | String | Id of the current activity instance. Required. |
 
 ### Syntax
 
 ```js
-const item = await processInstance.getItem({ instanceId: "item_123", activityInstanceId: "act_456" });
+const item = await processInstance.getItem({
+  instanceId: "item_123",
+  activityInstanceId: "act_456"
+});
 ```
+
+### Returns
+
+Returns the item's data with its `_id` and `_activity_instance_id`.

@@ -10,13 +10,16 @@ Updates an existing board item.
 ### Parameters
 
 | Parameters | Type   | Description                                                                        |
-| ---------- | ------ | ------------------------------------------------------------------------------------ |
-| options    | Object | `instanceId` (String, required), `data` (Object, required) - updated field values.   |
+| ---------- | ------ | ---------------------------------------------------------------------------------- |
+| options    | Object | `instanceId` (String, required), `data` (Object, required) - updated field values. |
 
 ### Syntax
 
 ```js
-await boardInstance.updateItem({ instanceId: "item_123", data: { Name: "Updated Item" } });
+await boardInstance.updateItem({
+  instanceId: "item_123",
+  data: { itemType: "Updated Item" }
+});
 ```
 
 ### Returns
